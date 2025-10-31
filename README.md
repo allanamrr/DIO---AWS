@@ -135,4 +135,23 @@ A tabela abaixo resume as principais diferenças entre as ferramentas:
 
 Em resumo, se a organização opera exclusivamente na AWS, o CloudFormation oferece uma experiência mais integrada e gerenciada. Se a estratégia envolve múltiplas nuvens ou serviços externos, o Terraform é geralmente a escolha mais flexível e universal.
 
+
+O LocalStack é uma ferramenta poderosa de simulação e teste que permite aos desenvolvedores emular (imitar) o ambiente da Amazon Web Services (AWS) diretamente em suas máquinas locais.
+
+Ele é executado tipicamente como um contêiner Docker e simula as APIs de diversos serviços da AWS, como S3, Lambda, DynamoDB, SQS, SNS e CloudFormation, sem custo e sem exigir uma conta AWS ativa ou conexão constante com a internet. 
+
+
+<img width="565" height="345" alt="image" src="https://github.com/user-attachments/assets/a56951fd-4cf9-4f8b-8a13-5bd87cc9ffef" />
+
+O LocalStack possui uma versão Community (Gratuita) e uma versão Pro (Paga) com mais recursos e suporte.
+
+O AWS Lambda é um serviço de computação serverless (sem servidor), orientado a eventos, que permite que você execute seu código sem provisionar ou gerenciar servidores. Ele é o pilar da arquitetura serverless da AWS.
+
+
+<img width="572" height="369" alt="image" src="https://github.com/user-attachments/assets/62424d7d-2cfc-4886-8e34-7b8f8962b3b4" />
+
+
+
+
+
 Até a próxima!
