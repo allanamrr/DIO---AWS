@@ -83,4 +83,56 @@ AWS Network Firewall: Amostras de templates do CloudFormation estão disponívei
 
 O uso de CloudFormation para firewalls garante que as regras de segurança sejam consistentes e aplicadas uniformemente em toda a infraestrutura.
 
+O AWS CloudFormation utiliza templates (modelos) para definir e provisionar recursos de infraestrutura como código (IaC). Esses templates são arquivos de texto que descrevem os recursos que você deseja criar na AWS, sendo essencialmente utilizados em dois formatos principais: YAML e JSON.
+
+<img width="761" height="167" alt="image" src="https://github.com/user-attachments/assets/b5f0e4b4-88ea-49c5-a3c1-3ef3abb153c9" />
+
+
+Independentemente do formato (YAML ou JSON), o template do CloudFormation segue uma estrutura lógica que inclui:
+
+AWSTemplateFormatVersion: Define a versão do formato do template.
+
+Description: Define a descrição do template (útil para detalhar o que está sendo criado).
+
+Resources: É a seção principal onde você define todos os recursos da AWS a serem provisionados (como EC2, S3, tabelas DynamoDB, etc.).
+
+Parameters: Permite criar templates dinâmicos (reutilizáveis) onde o usuário fornece valores de entrada na hora da execução (ex: tipo de instância EC2 ou nome do bucket S3).
+
+Outputs: Define os valores que serão retornados após a criação da stack (ex: o endereço DNS de um Load Balancer).
+
+O CloudFormation interpreta esse template e provisiona os recursos em um grupo chamado Stack.
+
+
+No CloudFormation, a infraestrutura é provisionada através do conceito de Stacks (Pilhas).
+
+Template (Modelo): Você começa definindo o estado desejado dos seus recursos AWS (como instâncias EC2, sub-redes, etc.) em um arquivo declarativo chamado template, escrito em YAML ou JSON.
+
+Stack: O CloudFormation interpreta esse template e provisiona todos os recursos nele descritos como uma única unidade. Essa unidade de recursos relacionados é chamada de Stack.
+
+Rollback Automático: Se ocorrer uma falha durante o processo de criação ou atualização da stack, o CloudFormation possui um recurso nativo de rollback, revertendo automaticamente todos os recursos criados ao último estado funcional conhecido, o que ajuda a prevenir downtime e simplifica a solução de problemas.
+
+Gerenciamento do Estado: O gerenciamento do estado da stack é feito automaticamente pela AWS.
+
+
+O AWS CloudFormation e o Terraform são as duas ferramentas mais proeminentes para Infraestrutura como Código (IaC), embora tenham filosofias e escopos de atuação distintos.
+
+1. Criação de Stacks (Pilhas) no AWS CloudFormation
+No CloudFormation, a infraestrutura é provisionada através do conceito de Stacks (Pilhas).
+
+Template (Modelo): Você começa definindo o estado desejado dos seus recursos AWS (como instâncias EC2, sub-redes, etc.) em um arquivo declarativo chamado template, escrito em YAML ou JSON.
+
+Stack: O CloudFormation interpreta esse template e provisiona todos os recursos nele descritos como uma única unidade. Essa unidade de recursos relacionados é chamada de Stack.
+
+Rollback Automático: Se ocorrer uma falha durante o processo de criação ou atualização da stack, o CloudFormation possui um recurso nativo de rollback, revertendo automaticamente todos os recursos criados ao último estado funcional conhecido, o que ajuda a prevenir downtime e simplifica a solução de problemas.
+
+Gerenciamento do Estado: O gerenciamento do estado da stack é feito automaticamente pela AWS.
+
+
+A tabela abaixo resume as principais diferenças entre as ferramentas:
+
+
+<img width="485" height="490" alt="image" src="https://github.com/user-attachments/assets/45890566-9466-4a83-a6c0-9aa38c0a062c" />
+
+Em resumo, se a organização opera exclusivamente na AWS, o CloudFormation oferece uma experiência mais integrada e gerenciada. Se a estratégia envolve múltiplas nuvens ou serviços externos, o Terraform é geralmente a escolha mais flexível e universal.
+
 Até a próxima!
